@@ -1,6 +1,6 @@
 node('master') {
 
-    def servicePrincipalId = '<your-service-principal>'
+    def servicePrincipalId = 'AzureServicePrincipal'
     def resourceGroup = 'JENKINS_AKS_DEMO'
     def aks = 'jenkinsaks'
 
