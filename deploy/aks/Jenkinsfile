@@ -11,7 +11,7 @@ node('master') {
     def dockerRegistry = 'jenkinsacr432789.azurecr.io'
     def imageName = "todo-app:${env.BUILD_NUMBER}"
     env.IMAGE_TAG = "${dockerRegistry}/${imageName}"
-    def dockerCredentialId = 'AzureACR'
+    def dockerCredentialId = 'AcrAzure'
 
     def currentEnvironment = 'blue'
     def newEnvironment = { ->
