@@ -1,14 +1,14 @@
 node('master') {
 
-    def servicePrincipalId = 'f27538c0-cd83-4609-8503-1531ef9603b4'
-    def resourceGroup = 'JENKINS_AKS_DEMO'
-    def aks = 'jenkinsaks'
+    def servicePrincipalId = 'Azure ServicePrincipal'
+    def resourceGroup = 'JNEKINS-AKS'
+    def aks = 'jenkins-cluster'
 
-    def cosmosResourceGroup = 'JENKINS_AKS_DEMO'
-    def cosmosDbName = 'jenkins-cosmos-db'
+    def cosmosResourceGroup = 'JNEKINS-AKS'
+    def cosmosDbName = 'cosmosdb5387ih'
     def dbName = '<your-dbname>'
 
-    def dockerRegistry = 'jenkinsacrr.azurecr.io'
+    def dockerRegistry = 'jenkinsacr432789.azurecr.io'
     def imageName = "todo-app:${env.BUILD_NUMBER}"
     env.IMAGE_TAG = "${dockerRegistry}/${imageName}"
     def dockerCredentialId = 'AzureACR'
