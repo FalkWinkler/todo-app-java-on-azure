@@ -4,6 +4,9 @@ metadata:
   name: todoapp-deployment-${TARGET_ROLE}
 spec:
   replicas: 2
+  selector:
+    app: todoapp
+    role: ${TARGET_ROLE}
   template:
     metadata:
       labels:
