@@ -7,7 +7,7 @@ spec:
   template:
     metadata:
       labels:
-        app: todoapp
+        #app: todoapp
         role: ${TARGET_ROLE}
     spec:
       containers:
