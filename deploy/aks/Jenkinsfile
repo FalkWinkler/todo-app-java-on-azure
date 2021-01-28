@@ -1,17 +1,17 @@
 node('master') {
 
-    def servicePrincipalId = 'Azure ServicePrincipal'
-    def resourceGroup = 'JNEKINS-AKS'
-    def aks = 'jenkins-cluster'
+    def servicePrincipalId = 'fb5dad68-63ab-4d2f-b2fb-b9c1dedc6eb7'
+    def resourceGroup = 'JenkinsPOC-RG'
+    def aks = 'jenkinscluster'
 
-    def cosmosResourceGroup = 'JNEKINS-AKS'
-    def cosmosDbName = 'cosmosdb5387ih'
+    def cosmosResourceGroup = 'JenkinsPOC-RG'
+    def cosmosDbName = 'cosmosjenkins'
     def dbName = '<your-dbname>'
 
-    def dockerRegistry = 'jenkinsacr432789.azurecr.io'
+    def dockerRegistry = 'acrjenkinss.azurecr.io'
     def imageName = "todo-app:${env.BUILD_NUMBER}"
     env.IMAGE_TAG = "${dockerRegistry}/${imageName}"
-    def dockerCredentialId = 'AcrAzure'
+    def dockerCredentialId = 'aed24c21-c929-4b81-9ffb-e837827b6ab1'
 
     def currentEnvironment = 'blue'
     def newEnvironment = { ->
