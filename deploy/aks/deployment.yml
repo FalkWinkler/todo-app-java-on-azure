@@ -6,9 +6,8 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      labels:
-        app: todoapp
-        role: ${TARGET_ROLE}
+      app: todoapp
+      role: ${TARGET_ROLE}
   template:
     metadata:
       labels:
