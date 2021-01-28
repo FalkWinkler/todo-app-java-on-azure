@@ -130,7 +130,7 @@ node('master') {
         acsDeploy azureCredentialsId: servicePrincipalId,
                   resourceGroupName: resourceGroup,
                   containerService: "${aks} | AKS",
-                  configFilePaths: 'src/aks/service.yml',
+                  configFilePaths: '..deploy/aks/service.yml',
                   enableConfigSubstitution: true
     }
 
