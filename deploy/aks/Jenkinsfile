@@ -112,8 +112,8 @@ node('master') {
                   echo 'Timeout while waiting for the ${service} endpoint to be ready'
                   exit 1
               fi
-              echo "${service} endpoint is not ready, wait 10 seconds..."
-              sleep 10
+              echo "${service} endpoint is not ready, wait 30 seconds..."
+              sleep 30
           done
         """
     }
