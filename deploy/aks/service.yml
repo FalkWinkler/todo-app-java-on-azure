@@ -5,7 +5,7 @@ metadata:
   labels:
     app: todoapp
     role: ${TARGET_ROLE}
-    #env: prod
+    env: prod
 spec:
   type: LoadBalancer
   selector:
