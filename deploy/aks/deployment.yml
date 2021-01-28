@@ -4,10 +4,14 @@ metadata:
   name: todoapp-deployment-${TARGET_ROLE}
 spec:
   replicas: 2
+  selector:
+    matchLabels:
+      labels:
+        app: todoapp
+        role: ${TARGET_ROLE}
   template:
     metadata:
-    selector:
-      matchLabels:
+      labels:
         app: todoapp
         role: ${TARGET_ROLE}
     spec:
