@@ -6,13 +6,11 @@ spec:
   replicas: 2
   template:
     metadata:
-      labels:
+    selector:
+      matchLabels:
         app: todoapp
         role: ${TARGET_ROLE}
     spec:
-      selector:
-        app: todoapp
-        role: ${TARGET_ROLE}
       containers:
       - name: todoapp-container
         image: ${IMAGE_TAG}
