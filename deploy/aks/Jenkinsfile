@@ -13,7 +13,7 @@ node('master') {
     env.IMAGE_TAG = "${dockerRegistry}/${imageName}"
     def dockerCredentialId = 'credentialsACR'
 
-    def currentEnvironment = 'green'
+    def currentEnvironment = 'blue'
     def newEnvironment = { ->
         currentEnvironment == 'blue' ? 'green' : 'blue'
     }
